@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.controlsUI = new System.Windows.Forms.GroupBox();
+            this.generationUI = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.clearUI = new System.Windows.Forms.Button();
             this.stopUI = new System.Windows.Forms.Button();
             this.startUI = new System.Windows.Forms.Button();
             this.gridUI = new System.Windows.Forms.GroupBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.generationUI = new System.Windows.Forms.TextBox();
             this.controlsUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,24 @@
             this.controlsUI.Size = new System.Drawing.Size(450, 50);
             this.controlsUI.TabIndex = 0;
             this.controlsUI.TabStop = false;
+            // 
+            // generationUI
+            // 
+            this.generationUI.Location = new System.Drawing.Point(348, 24);
+            this.generationUI.Name = "generationUI";
+            this.generationUI.ReadOnly = true;
+            this.generationUI.Size = new System.Drawing.Size(96, 20);
+            this.generationUI.TabIndex = 4;
+            this.generationUI.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(345, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Current Generation:";
             // 
             // clearUI
             // 
@@ -96,36 +114,18 @@
             this.timer.Interval = 500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Current Generation:";
-            // 
-            // generationUI
-            // 
-            this.generationUI.Location = new System.Drawing.Point(348, 24);
-            this.generationUI.Name = "generationUI";
-            this.generationUI.ReadOnly = true;
-            this.generationUI.Size = new System.Drawing.Size(96, 20);
-            this.generationUI.TabIndex = 4;
-            this.generationUI.Text = "0";
-            // 
             // LifeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(474, 532);
+            this.ClientSize = new System.Drawing.Size(474, 531);
             this.Controls.Add(this.gridUI);
             this.Controls.Add(this.controlsUI);
             this.MaximumSize = new System.Drawing.Size(490, 570);
             this.MinimumSize = new System.Drawing.Size(490, 570);
             this.Name = "LifeUI";
-            this.Text = "Toroidal Game of Life";
+            this.Text = "Conway\'s Game of Life";
             this.Load += new System.EventHandler(this.LifeUI_Load);
             this.controlsUI.ResumeLayout(false);
             this.controlsUI.PerformLayout();
